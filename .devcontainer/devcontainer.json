@@ -1,0 +1,17 @@
+{
+  "name": "landing-page",
+  "image": "node:14.14.0-alpine",
+  "forwardPorts": [
+    3000, // Next.js
+    8000,
+    7000,
+    9000,
+  ],
+  "extensions": [
+    "jpoissonnier.vscode-styled-components"
+  ],
+  "settings": { 
+		"terminal.integrated.shell.linux": null
+  },
+  "postCreateCommand": "apk update && apk add git openssh vim",
+}
