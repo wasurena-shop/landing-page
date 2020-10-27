@@ -1,14 +1,13 @@
 import { FC } from "react"
 import { styled } from "plugins/emotion"
 import { Header } from "components/Header"
+import { Footer } from "components/Footer"
 
 export const Layout: FC = ({ children }) => (
   <Wrapper>
     <Header />
     <Main>{children}</Main>
-    <footer>
-      <p>© ワスレナ商店</p>
-    </footer>
+    <Footer />
   </Wrapper>
 )
 
