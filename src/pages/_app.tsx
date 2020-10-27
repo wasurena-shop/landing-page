@@ -8,6 +8,7 @@ const theme: Theme = {
     primary: "#ccc",
     secondary: "#dedede",
     accent: "#fea",
+    black: "#231815",
   },
 }
 

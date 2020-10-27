@@ -1,11 +1,10 @@
 import { FC } from "react"
 import { styled } from "plugins/emotion"
+import { Header } from "components/Header"
 
 export const Layout: FC = ({ children }) => (
   <Wrapper>
-    <header>
-      <p>ワスレナ商店</p>
-    </header>
+    <Header />
     <Main>{children}</Main>
     <footer>
       <p>© ワスレナ商店</p>
