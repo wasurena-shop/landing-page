@@ -1,3 +1,4 @@
+import NextLink from "next/link"
 import { styled } from "plugins/emotion"
 import Logo from "../svgs/wasurena-logo-yoko-zure.svg"
 import { Container } from "components/Container"
@@ -6,9 +7,11 @@ export const Header = () => (
   <Wrapper>
     <Container>
       <Flex>
-        <LogoWrapper>
-          <Logo />
-        </LogoWrapper>
+        <NextLink href="/" as="">
+          <LogoWrapper>
+            <Logo />
+          </LogoWrapper>
+        </NextLink>
         <Controls>
           <Link>
             ONELINE
@@ -32,8 +35,11 @@ const Flex = styled.div`
   align-items: center;
 `
 
-const LogoWrapper = styled.div`
-  & > svg {
+const LogoWrapper = styled.a`
+  cursor: pointer;
+
+  & svg {
+    display: block;
     height: 48px;
     margin: 6px 0;
   }
