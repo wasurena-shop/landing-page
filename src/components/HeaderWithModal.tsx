@@ -66,6 +66,7 @@ const Link = styled.a`
   border: none;
   border-radius: 4px;
   padding: 4px 10px;
+  margin-right: 1em;
   cursor: pointer;
   font-weight: bold;
   font-size: 0.7rem;
