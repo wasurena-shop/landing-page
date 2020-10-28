@@ -14,7 +14,7 @@ export const Header = () => (
         </NextLink>
         <Controls>
           <Link>
-            ONELINE
+            ONLINE
             <br />
             SHOP
           </Link>
@@ -55,10 +55,10 @@ const Link = styled.a`
   background-color: ${({ theme }) => theme.color.black};
   border: none;
   border-radius: 4px;
-  padding: 6px 12px;
+  padding: 4px 10px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #fff;
   outline: none;
   text-align: center;
