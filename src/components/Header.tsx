@@ -1,9 +1,14 @@
+import React from "react"
 import NextLink from "next/link"
 import { styled } from "plugins/emotion"
 import Logo from "../svgs/wasurena-logo-yoko-zure.svg"
 import { Container } from "components/Container"
 
-export const Header = () => (
+type Props = {
+  openModal: () => void
+}
+
+export const Header: React.FC<Props> = ({ openModal }) => (
   <Wrapper>
     <Container>
       <Flex>
@@ -18,7 +23,7 @@ export const Header = () => (
             <br />
             SHOP
           </Link>
-          <button>MENU</button>
+          <button onClick={openModal}>MENU</button>
         </Controls>
       </Flex>
     </Container>
