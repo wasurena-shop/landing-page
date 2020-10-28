@@ -1,34 +1,39 @@
-import React from "react"
+import React, { useState } from "react"
 import NextLink from "next/link"
 import { styled } from "plugins/emotion"
 import Logo from "../svgs/wasurena-logo-yoko-zure.svg"
 import { Container } from "components/Container"
+import { Burger } from "components/Burger"
+import { NavigationModal } from "components/NavigationModal"
 
-type Props = {
-  openModal: () => void
+export const HeaderWithModal: React.FC = () => {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <>
+      <NavigationModal open={open} closeModal={() => setOpen(false)} />
+      <Wrapper>
+        <Container>
+          <Flex>
+            <NextLink href="/" as="">
+              <LogoWrapper>
+                <Logo />
+              </LogoWrapper>
+            </NextLink>
+            <Controls>
+              <Link>
+                ONLINE
+                <br />
+                SHOP
+              </Link>
+              <Burger open={open} toggleMenu={() => setOpen((prev) => !prev)} />
+            </Controls>
+          </Flex>
+        </Container>
+      </Wrapper>
+    </>
+  )
 }
-
-export const Header: React.FC<Props> = ({ openModal }) => (
-  <Wrapper>
-    <Container>
-      <Flex>
-        <NextLink href="/" as="">
-          <LogoWrapper>
-            <Logo />
-          </LogoWrapper>
-        </NextLink>
-        <Controls>
-          <Link>
-            ONLINE
-            <br />
-            SHOP
-          </Link>
-          <button onClick={openModal}>MENU</button>
-        </Controls>
-      </Flex>
-    </Container>
-  </Wrapper>
-)
 
 const Wrapper = styled.header`
   box-shadow: 0 2px 10px 10px rgb(233, 233, 233);

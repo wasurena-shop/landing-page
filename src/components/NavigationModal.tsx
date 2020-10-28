@@ -54,6 +54,7 @@ export const NavigationModal: React.FC<Props> = ({ open, closeModal }) =>
 
 const Wrapper = styled.div`
   position: absolute;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
