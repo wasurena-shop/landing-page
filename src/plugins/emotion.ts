@@ -7,6 +7,9 @@ export type Theme = {
     accent: string
     black: string
   }
+  animation: {
+    transition: string
+  }
 }
 
 export const styled = EmStyled as CreateStyled<Theme>

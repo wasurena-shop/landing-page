@@ -14,10 +14,11 @@ export const Layout: FC = ({ children }) => {
 }
 
 const Wrapper = styled.div`
-  max-width: 100vw;
   min-height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
+  overflow: scroll;
 `
 
 const Main = styled.main`

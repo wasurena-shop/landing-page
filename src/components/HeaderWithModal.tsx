@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import NextLink from "next/link"
 import { styled } from "plugins/emotion"
 import Logo from "../svgs/wasurena-logo-yoko-zure.svg"
@@ -8,6 +8,9 @@ import { NavigationModal } from "components/NavigationModal"
 
 export const HeaderWithModal: React.FC = () => {
   const [open, setOpen] = useState(false)
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [open])
 
   return (
     <>

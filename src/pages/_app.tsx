@@ -10,6 +10,9 @@ const theme: Theme = {
     accent: "#fea",
     black: "#231815",
   },
+  animation: {
+    transition: "all 0.3s ease",
+  },
 }
 
 const App = ({ Component, pageProps }: AppProps) => (
@@ -17,16 +20,16 @@ const App = ({ Component, pageProps }: AppProps) => (
     <Global
       styles={css`
         *,
-        *::before,
-        *::after {
+        *:before,
+        *:after {
           box-sizing: border-box;
         }
         body {
-          position: relative;
           font-family: "Inter", "BlinkMacSystemFont",
             "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
           margin: 0;
-          padding: 0;
+          width: 100vw;
+          height: 100vh;
         }
       `}
     />
