@@ -16,10 +16,17 @@ const App = ({ Component, pageProps }: AppProps) => (
   <ThemeProvider theme={theme}>
     <Global
       styles={css`
+        *,
+        *::before,
+        *::after {
+          box-sizing: border-box;
+        }
         body {
+          position: relative;
           font-family: "Inter", "BlinkMacSystemFont",
             "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
           margin: 0;
+          padding: 0;
         }
       `}
     />
