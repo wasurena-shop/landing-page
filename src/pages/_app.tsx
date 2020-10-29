@@ -28,8 +28,6 @@ const App = ({ Component, pageProps }: AppProps) => (
           font-family: "Inter", "BlinkMacSystemFont",
             "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
           margin: 0;
-          width: 100vw;
-          height: 100vh;
         }
       `}
     />

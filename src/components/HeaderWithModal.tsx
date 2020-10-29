@@ -9,7 +9,7 @@ import { NavigationModal } from "components/NavigationModal"
 export const HeaderWithModal: React.FC = () => {
   const [open, setOpen] = useState(false)
   useEffect(() => {
-    window.scrollTo(0, 0)
+    if (open) window.scrollTo(0, 0)
   }, [open])
 
   return (
