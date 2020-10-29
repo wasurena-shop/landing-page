@@ -19,7 +19,7 @@ const links: { title: string; href: string }[] = [
   },
   {
     title: "ご出品の流れ",
-    href: "/flow",
+    href: "/exhibit-flow",
   },
   {
     title: "お問い合わせ",
