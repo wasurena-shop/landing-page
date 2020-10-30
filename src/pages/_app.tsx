@@ -9,6 +9,7 @@ const theme: Theme = {
     secondary: "#dedede",
     accent: "#fea",
     black: "#231815",
+    white: "#fff",
   },
   animation: {
     transition: "all 0.3s ease",

@@ -1,47 +1,19 @@
 import React from "react"
-import NextLink from "next/link"
 import { Global, css } from "@emotion/core"
 import { styled } from "plugins/emotion"
+import { Navigation } from "components/Navigation"
 
 type Props = {
   open: boolean
   closeModal: () => void
 }
 
-const links: { title: string; href: string }[] = [
-  {
-    title: "ワスレナ商店について",
-    href: "/",
-  },
-  {
-    title: "お知らせ",
-    href: "/news",
-  },
-  {
-    title: "ご出品の流れ",
-    href: "/exhibit-flow",
-  },
-  {
-    title: "お問い合わせ",
-    href: "/contact",
-  },
-]
-
 export const NavigationModal: React.FC<Props> = ({ open, closeModal }) => (
   <>
     <Overlay open={open} />
     <Wrapper open={open}>
       <Inner open={open}>
-        <ul>
-          {links.map((link, index) => (
-            <li key={index}>
-              <NextLink href={link.href}>
-                <Link onClick={closeModal}>{link.title}</Link>
-              </NextLink>
-            </li>
-          ))}
-        </ul>
-        <button onClick={closeModal}>閉じる</button>
+        <Navigation onLinkClick={closeModal} />
       </Inner>
     </Wrapper>
     {open ? (
@@ -88,7 +60,7 @@ const Wrapper = styled.div`
 `
 const Inner = styled.div`
   position: absolute;
-  top: 50%;
+  top: 42%;
   left: 50%;
   display: flex;
   flex-direction: column;
@@ -97,9 +69,4 @@ const Inner = styled.div`
   transition: ${({ theme }) => theme.animation.transition};
   transform: ${({ open }: Open) =>
     open ? "translate(-50%,-50%) scale(1)" : "translate(-50%,-50%) scale(1.2)"};
-`
-
-const Link = styled.a`
-  color: #fff;
-  cursor: pointer;
 `

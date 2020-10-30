@@ -6,6 +6,7 @@ export type Theme = {
     secondary: string
     accent: string
     black: string
+    white: string
   }
   animation: {
     transition: string
