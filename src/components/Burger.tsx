@@ -38,7 +38,7 @@ export const BurgerInner = styled.div`
   &:before,
   &:after {
     width: ${WIDTH};
-    height: 3px;
+    height: 2px;
     transition: ${({ theme }) => theme.animation.transition};
     border-radius: 4px;
     background-color: ${({ open, theme }: Open) =>

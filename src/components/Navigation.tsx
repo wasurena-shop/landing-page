@@ -2,6 +2,7 @@ import NextLink from "next/link"
 import { styled } from "plugins/emotion"
 import { IconType } from "react-icons"
 import { FaTwitter, FaInstagram, FaLine, FaYoutube } from "react-icons/fa"
+import Logo from "../svgs/wasurena-logo-zure-white.svg"
 
 type Link = {
   title: string
@@ -56,7 +57,9 @@ type Props = {
 
 export const Navigation: React.FC<Props> = ({ onLinkClick }) => (
   <Wrapper>
-    <LogoWrapper>Logo</LogoWrapper>
+    <LogoWrapper>
+      <Logo />
+    </LogoWrapper>
 
     <Links>
       {links.map((link, index) => (
@@ -95,9 +98,7 @@ const Wrapper = styled.div`
 
 // Logo
 const LogoWrapper = styled.div`
-  width: 200px;
-  height: 100px;
-  background-color: ${({ theme }) => theme.color.secondary};
+  width: 140px;
 `
 
 // Links
