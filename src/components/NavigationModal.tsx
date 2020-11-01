@@ -13,7 +13,7 @@ export const NavigationModal: React.FC<Props> = ({ open, closeModal }) => (
     <Overlay open={open} />
     <Wrapper open={open}>
       <Inner open={open}>
-        <Navigation onLinkClick={closeModal} />
+        <Navigation open={open} onLinkClick={closeModal} />
       </Inner>
     </Wrapper>
     {open ? (

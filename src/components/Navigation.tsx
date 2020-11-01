@@ -53,9 +53,10 @@ const snsLinks: (Link & { Icon: IconType })[] = [
 
 type Props = {
   onLinkClick: () => void
+  open: boolean
 }
 
-export const Navigation: React.FC<Props> = ({ onLinkClick }) => (
+export const Navigation: React.FC<Props> = ({ onLinkClick, open }) => (
   <Wrapper>
     <LogoWrapper>
       <Logo />
@@ -65,7 +66,9 @@ export const Navigation: React.FC<Props> = ({ onLinkClick }) => (
       {links.map((link, index) => (
         <LinkItem key={index}>
           <NextLink href={link.href}>
-            <Link onClick={onLinkClick}>{link.title}</Link>
+            <Link open={open} index={index} onClick={onLinkClick}>
+              {link.title}
+            </Link>
           </NextLink>
         </LinkItem>
       ))}
@@ -115,13 +118,22 @@ const LinkItem = styled.p`
   writing-mode: vertical-rl;
 `
 
+type OpenIndex = {
+  open: boolean
+  index: number
+}
+
 const Link = styled.a`
   position: relative;
   display: inline-block;
   color: #fff;
   cursor: pointer;
   font-size: 1.2rem;
-  border-right: 1px solid ${({ theme }) => theme.color.white};
+  transition: all ease 0.3s;
+  transition-delay: ${({ open, index }: OpenIndex) =>
+    open ? `${index * 0.1 + 0.2}s` : "0"};
+  top: ${({ open }: OpenIndex) => (open ? "0" : "-60px")};
+  opacity: ${({ open }: OpenIndex) => (open ? "1" : "0")};
 `
 
 // ONLINE SHOP
