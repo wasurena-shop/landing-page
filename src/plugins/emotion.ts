@@ -11,6 +11,7 @@ export type Theme = {
   animation: {
     transition: string
   }
+  shadow: string
 }
 
 export const styled = EmStyled as CreateStyled<Theme>
