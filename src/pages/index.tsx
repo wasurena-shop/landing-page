@@ -56,11 +56,11 @@ const Home = () => {
               online
               shop」で販売いたします。ご出品者の成約金は、ご指定口座に自動で振込まれます。
             </p>
-            <div>
+            <Info>
               <p>
                 ※出品物は委託販売となります。成約後、売上の30%がご出品者に配分されます。配分は、月末締め翌月末払いにてご指定口座にお振込みさせていただきます。
               </p>
-            </div>
+            </Info>
           </div>
         </Section>
       </Container>
@@ -112,14 +112,26 @@ const Section = styled.section`
     position: relative;
     top: -0.5em;
     margin: 0;
-    padding: 8px 12px;
+    padding: 14px 12px;
     background-color: ${({ theme }) => theme.color.white};
+    color: ${({ theme }) => theme.color.secondary};
     font-size: 1rem;
     letter-spacing: 0.04rem;
 
     & > p {
       margin: 0;
     }
+  }
+`
+
+const Info = styled.div`
+  margin-top: 1.8rem;
+  color: ${({ theme }) => theme.color.secondary};
+  font-size: 0.8rem;
+  letter-spacing: 0.04rem;
+
+  & > p {
+    margin: 0;
   }
 `
 

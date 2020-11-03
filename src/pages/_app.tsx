@@ -6,7 +6,7 @@ import { Theme } from "plugins/emotion"
 const theme: Theme = {
   color: {
     primary: "#ccc",
-    secondary: "#dedede",
+    secondary: "#555",
     accent: "#fea",
     black: "#231815",
     white: "#fff",
