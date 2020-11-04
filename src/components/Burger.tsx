@@ -42,7 +42,7 @@ export const BurgerInner = styled.div`
     transition: ${({ theme }) => theme.animation.transition};
     border-radius: 4px;
     background-color: ${({ open, theme }: Open) =>
-      open ? "#fff" : theme.color.black};
+      open ? "#fff" : theme.color.primary};
   }
   &:before,
   &:after {

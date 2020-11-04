@@ -5,10 +5,9 @@ import { Theme } from "plugins/emotion"
 
 const theme: Theme = {
   color: {
-    primary: "#ccc",
+    primary: "#231815",
     secondary: "#555",
     accent: "#fea",
-    black: "#231815",
     white: "#fff",
   },
   animation: {

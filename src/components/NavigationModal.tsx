@@ -39,7 +39,7 @@ const Overlay = styled.div`
   top: 0;
   left: 0;
   z-index: 10;
-  background-color: ${({ theme }) => theme.color.black};
+  background-color: ${({ theme }) => theme.color.primary};
   transition: ${({ theme }) => theme.animation.transition};
   opacity: ${({ open }: Open) => (open ? "1" : "0")};
   pointer-events: ${({ open }: Open) => (open ? "initial" : "none")};

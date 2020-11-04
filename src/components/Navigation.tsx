@@ -141,7 +141,7 @@ const LinkToOnlineShop = styled.a`
   margin-top: 1.6em;
   display: block;
   background-color: ${({ theme }) => theme.color.white};
-  color: ${({ theme }) => theme.color.black};
+  color: ${({ theme }) => theme.color.primary};
   font-weight: bold;
   font-size: 1rem;
   padding: 10px 14px;

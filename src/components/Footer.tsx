@@ -10,7 +10,7 @@ export const Footer = () => (
 )
 
 const Wrapper = styled.footer`
-  background-color: ${({ theme }) => theme.color.black};
+  background-color: ${({ theme }) => theme.color.primary};
 `
 
 const Copyright = styled.p`

@@ -65,7 +65,7 @@ const Controls = styled.div`
 `
 
 const Link = styled.a`
-  background-color: ${({ theme }) => theme.color.black};
+  background-color: ${({ theme }) => theme.color.primary};
   border: none;
   border-radius: 4px;
   padding: 4px 10px;
