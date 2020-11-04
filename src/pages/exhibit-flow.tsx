@@ -12,7 +12,7 @@ const ExhibitFlow = (): JSX.Element => (
       </section>
 
       <Section>
-        <h2>一.事前審査</h2>
+        <h2>一. 事前審査</h2>
         <ImageWrapper>
           <ImgContain src="/images/flow01.jpg" />
         </ImageWrapper>
@@ -22,7 +22,7 @@ const ExhibitFlow = (): JSX.Element => (
       </Section>
 
       <Section>
-        <h2>二.お持ち込み</h2>
+        <h2>二. お持ち込み</h2>
         <ImageWrapper>
           <ImgCover src="/images/main02.png" />
         </ImageWrapper>
@@ -43,7 +43,7 @@ const ExhibitFlow = (): JSX.Element => (
       </Section>
 
       <Section>
-        <h2>三.出品物の評定</h2>
+        <h2>三. 出品物の評定</h2>
         <List>
           <li>出品物の概要</li>
           <li>ご希望の販売価格</li>
@@ -56,7 +56,7 @@ const ExhibitFlow = (): JSX.Element => (
       </Section>
 
       <Section>
-        <h2>四.販売</h2>
+        <h2>四. 販売</h2>
         <ImageWrapper>
           <ImgCover src="/images/main03.png" />
         </ImageWrapper>
@@ -70,7 +70,7 @@ const ExhibitFlow = (): JSX.Element => (
       </Section>
 
       <Section>
-        <h2>五.精算</h2>
+        <h2>五. 精算</h2>
         <p>
           成約後は、売上の30％を月末締め翌月末払いにてご指定口座にお振込みさせていただきます。
         </p>
@@ -85,7 +85,26 @@ const Section = styled.section`
   padding: 2rem 0;
 
   & > h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 0 2rem 0;
+
+    &::before,
+    &::after {
+      flex: 1 1 auto;
+      content: "";
+      display: inline-block;
+      width: 1rem;
+      height: 1px;
+      background-color: ${({ theme }) => theme.color.primary};
+    }
+    &::before {
+      margin-right: 1rem;
+    }
+    &::after {
+      margin-left: 1rem;
+    }
   }
 
   & > p {
