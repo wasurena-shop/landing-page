@@ -16,10 +16,11 @@ export const List = styled.ul`
     content: "";
     flex: 0 0 auto;
     display: inline-block;
-    width: 8px;
-    height: 1px;
-    margin-top: 0.9rem;
-    margin-right: 0.5rem;
+    width: 6px;
+    height: 6px;
+    margin-top: 0.7rem;
+    margin-right: 0.7rem;
     background-color: ${({ theme }) => theme.color.primary};
+    transform: scaleX(1.3) rotate(45deg);
   }
 `
