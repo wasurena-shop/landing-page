@@ -6,13 +6,33 @@ import { List } from "components/common/List"
 const ExhibitFlow = (): JSX.Element => (
   <Layout>
     <Container>
-      <section>
+      <TitleSection>
         <h2>ご出品の流れ</h2>
         <p>ワスレナ商店のご出品の手順は、以下のようになります。</p>
-      </section>
+      </TitleSection>
+
+      <Navigation>
+        <TableOfContents>
+          <Li>
+            <a href="#事前審査">事前審査</a>
+          </Li>
+          <Li>
+            <a href="#お持ち込み">お持ち込み</a>
+          </Li>
+          <Li>
+            <a href="#出品物の評定">出品物の評定</a>
+          </Li>
+          <Li>
+            <a href="#販売">販売</a>
+          </Li>
+          <Li>
+            <a href="#精算">精算</a>
+          </Li>
+        </TableOfContents>
+      </Navigation>
 
       <Section>
-        <h2>一. 事前審査</h2>
+        <h2 id="事前審査">一. 事前審査</h2>
         <ImageWrapper>
           <ImgContain src="/images/flow01.jpg" />
         </ImageWrapper>
@@ -22,7 +42,7 @@ const ExhibitFlow = (): JSX.Element => (
       </Section>
 
       <Section>
-        <h2>二. お持ち込み</h2>
+        <h2 id="お持ち込み">二. お持ち込み</h2>
         <ImageWrapper>
           <ImgCover src="/images/main02.png" />
         </ImageWrapper>
@@ -43,7 +63,7 @@ const ExhibitFlow = (): JSX.Element => (
       </Section>
 
       <Section>
-        <h2>三. 出品物の評定</h2>
+        <h2 id="出品物の評定">三. 出品物の評定</h2>
         <List>
           <li>出品物の概要</li>
           <li>ご希望の販売価格</li>
@@ -56,7 +76,7 @@ const ExhibitFlow = (): JSX.Element => (
       </Section>
 
       <Section>
-        <h2>四. 販売</h2>
+        <h2 id="販売">四. 販売</h2>
         <ImageWrapper>
           <ImgCover src="/images/main03.png" />
         </ImageWrapper>
@@ -70,7 +90,7 @@ const ExhibitFlow = (): JSX.Element => (
       </Section>
 
       <Section>
-        <h2>五. 精算</h2>
+        <h2 id="精算">五. 精算</h2>
         <p>
           成約後は、売上の30％を月末締め翌月末払いにてご指定口座にお振込みさせていただきます。
         </p>
@@ -80,6 +100,54 @@ const ExhibitFlow = (): JSX.Element => (
     </Container>
   </Layout>
 )
+
+const TitleSection = styled.section`
+  padding-top: 2rem;
+`
+
+const Navigation = styled.nav`
+  padding: 1rem 0 2rem 0;
+  margin: 0 1rem;
+`
+
+const TableOfContents = styled.ol`
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  list-style: none;
+  counter-reset: number 0;
+
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 1.4rem 1.8rem 2rem 1.8rem;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  color: ${({ theme }) => theme.color.secondary};
+`
+const Li = styled.li`
+  writing-mode: vertical-lr;
+  font-weight: bold;
+  height: fit-content;
+
+  & > a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &::before {
+    counter-increment: number 1;
+    content: counter(number, cjk-ideographic) "、";
+    font-size: 0.9rem;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: #ccc;
+  }
+`
 
 const Section = styled.section`
   padding: 2rem 0;
@@ -97,7 +165,7 @@ const Section = styled.section`
       display: inline-block;
       width: 1rem;
       height: 1px;
-      background-color: ${({ theme }) => theme.color.primary};
+      background-color: #aaa;
     }
     &::before {
       margin-right: 1rem;
