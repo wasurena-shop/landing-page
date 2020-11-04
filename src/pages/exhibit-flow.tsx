@@ -1,3 +1,4 @@
+import { styled } from "plugins/emotion"
 import { Layout } from "components/Layout"
 import { Container } from "components/Container"
 import { List } from "components/common/List"
@@ -12,7 +13,9 @@ const ExhibitFlow = (): JSX.Element => (
 
       <section>
         <h2>一.事前審査</h2>
-        <img src="A" alt="" />
+        <ImageWrapper>
+          <ImgContain src="/images/flow01.jpg" />
+        </ImageWrapper>
         <p>
           ワスレナ商店公式ラインにて、出品希望の旨をご連絡いただきます。ご連絡先、お持込ご希望の日時、出品物の概要をお伺いいたします。
         </p>
@@ -20,7 +23,9 @@ const ExhibitFlow = (): JSX.Element => (
 
       <section>
         <h2>二.お持ち込み</h2>
-        <img src="B" alt="" />
+        <ImageWrapper>
+          <ImgCover src="/images/main02.png" />
+        </ImageWrapper>
         <p>
           出品カウンター(狸小路 蒼氓
           店内カウンター(←そうぼうのサイトのリンク))まで出品物をお持込いただき、スタッフが対応いたします。お持ち込みの際は、以下のものをご持参いただきますよう、お願いいたします。
@@ -39,7 +44,6 @@ const ExhibitFlow = (): JSX.Element => (
 
       <section>
         <h2>三.出品物の評定</h2>
-        <img src="C" alt="" />
         <List>
           <li>出品物の概要</li>
           <li>ご希望の販売価格</li>
@@ -53,7 +57,9 @@ const ExhibitFlow = (): JSX.Element => (
 
       <section>
         <h2>四.販売</h2>
-        <img src="D" alt="" />
+        <ImageWrapper>
+          <ImgCover src="/images/main03.png" />
+        </ImageWrapper>
         <p>
           出品物は、「ワスレナ商店 online
           shop」にて、出品物にまつわるメッセージを添え、6ヶ月間委託にて販売させていただきます。
@@ -65,7 +71,6 @@ const ExhibitFlow = (): JSX.Element => (
 
       <section>
         <h2>五.精算</h2>
-        <img src="E" alt="" />
         <p>
           成約後は、売上の30％を月末締め翌月末払いにてご指定口座にお振込みさせていただきます。
         </p>
@@ -73,5 +78,26 @@ const ExhibitFlow = (): JSX.Element => (
     </Container>
   </Layout>
 )
+
+const ImageWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  padding-bottom: ${(100 * 3) / 4}%;
+  margin: 0 0 0 auto;
+`
+
+const ImgContain = styled.img`
+  position: absolute;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+`
+
+const ImgCover = styled.img`
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+`
 
 export default ExhibitFlow
