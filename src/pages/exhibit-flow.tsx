@@ -11,7 +11,7 @@ const ExhibitFlow = (): JSX.Element => (
         <p>ワスレナ商店のご出品の手順は、以下のようになります。</p>
       </section>
 
-      <section>
+      <Section>
         <h2>一.事前審査</h2>
         <ImageWrapper>
           <ImgContain src="/images/flow01.jpg" />
@@ -19,9 +19,9 @@ const ExhibitFlow = (): JSX.Element => (
         <p>
           ワスレナ商店公式ラインにて、出品希望の旨をご連絡いただきます。ご連絡先、お持込ご希望の日時、出品物の概要をお伺いいたします。
         </p>
-      </section>
+      </Section>
 
-      <section>
+      <Section>
         <h2>二.お持ち込み</h2>
         <ImageWrapper>
           <ImgCover src="/images/main02.png" />
@@ -40,9 +40,9 @@ const ExhibitFlow = (): JSX.Element => (
             お振込先口座のわかるもの(例:銀行キャッシュカード、もしくは通帳){" "}
           </li>
         </List>
-      </section>
+      </Section>
 
-      <section>
+      <Section>
         <h2>三.出品物の評定</h2>
         <List>
           <li>出品物の概要</li>
@@ -53,9 +53,9 @@ const ExhibitFlow = (): JSX.Element => (
         <p className="info">
           ※独自の基準により評定させていただくため、お持込いただいた品物をお預かりできない場合もございます。予めご了承ください。
         </p>
-      </section>
+      </Section>
 
-      <section>
+      <Section>
         <h2>四.販売</h2>
         <ImageWrapper>
           <ImgCover src="/images/main03.png" />
@@ -67,17 +67,38 @@ const ExhibitFlow = (): JSX.Element => (
         <p className="info">
           ※お預かりした出品物は、不定期にて開催いたしますイベントにて販売させていただく事もございます。予めご了承ください。
         </p>
-      </section>
+      </Section>
 
-      <section>
+      <Section>
         <h2>五.精算</h2>
         <p>
           成約後は、売上の30％を月末締め翌月末払いにてご指定口座にお振込みさせていただきます。
         </p>
-      </section>
+      </Section>
+
+      <Blank />
     </Container>
   </Layout>
 )
+
+const Section = styled.section`
+  padding: 2rem 0;
+
+  & > h2 {
+    margin: 0 0 2rem 0;
+  }
+
+  & > p {
+    margin: 2rem 0 0 0;
+    font-size: 1rem;
+  }
+
+  & > p.info {
+    font-size: 0.8rem;
+    letter-spacing: 0.03rem;
+    color: ${({ theme }) => theme.color.secondary};
+  }
+`
 
 const ImageWrapper = styled.div`
   position: relative;
@@ -98,6 +119,11 @@ const ImgCover = styled.img`
   object-fit: cover;
   width: 100%;
   height: 100%;
+`
+
+const Blank = styled.div`
+  width: 100%;
+  padding: 3em 0;
 `
 
 export default ExhibitFlow
