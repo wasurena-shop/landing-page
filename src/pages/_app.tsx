@@ -7,7 +7,7 @@ const theme: Theme = {
   color: {
     primary: "#231815",
     secondary: "#555",
-    accent: "#fea",
+    accent: "#00b9cc",
     white: "#fff",
   },
   animation: {

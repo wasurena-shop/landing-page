@@ -1,5 +1,6 @@
 import { Layout } from "components/Layout"
 import { Container } from "components/Container"
+import { List } from "components/common/List"
 
 const ExhibitFlow = (): JSX.Element => (
   <Layout>
@@ -25,7 +26,7 @@ const ExhibitFlow = (): JSX.Element => (
           店内カウンター(←そうぼうのサイトのリンク))まで出品物をお持込いただき、スタッフが対応いたします。お持ち込みの際は、以下のものをご持参いただきますよう、お願いいたします。
         </p>
         <p>～ご来店時に持参いただくもの～</p>
-        <ul>
+        <List>
           <li>出品物</li>
           <li>
             身分証明書(住所、生年月日が記載された有効期限内のもの。例:運転免許証、健康保険証、パスポート等)
@@ -33,17 +34,17 @@ const ExhibitFlow = (): JSX.Element => (
           <li>
             お振込先口座のわかるもの(例:銀行キャッシュカード、もしくは通帳){" "}
           </li>
-        </ul>
+        </List>
       </section>
 
       <section>
         <h2>三.出品物の評定</h2>
         <img src="C" alt="" />
-        <ul>
+        <List>
           <li>出品物の概要</li>
           <li>ご希望の販売価格</li>
           <li>品物にまつわるメッセージ(商品説明)</li>
-        </ul>
+        </List>
         <p>をお伺いし、評定させていただきます。</p>
         <p className="info">
           ※独自の基準により評定させていただくため、お持込いただいた品物をお預かりできない場合もございます。予めご了承ください。
