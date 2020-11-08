@@ -1,6 +1,6 @@
 import { styled } from "plugins/emotion"
 
-export const InstaCard = styled.div`
+export const SNSCard = styled.div`
   position: relative;
   border-radius: 4px;
   border: 1px solid #f1f1f1;
@@ -29,6 +29,23 @@ export const ImageWrapper = styled.div`
   padding-bottom: 150px;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.color.white};
+  margin-bottom: 0.8rem;
+
+  & > img {
+    position: absolute;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+`
+
+export const InstaImageWrapper = styled.div`
+  position: relative;
+  width: 150px;
+  padding-bottom: 150px;
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.color.white};
+  margin-bottom: 1.6rem;
 
   & > img {
     position: absolute;
@@ -67,7 +84,7 @@ export const ImageWrapper = styled.div`
 `
 
 export const Title = styled.h2`
-  margin: 1.6rem 0 0 0;
+  margin: 0;
   color: ${({ theme }) => theme.color.primary};
   font-size: 1.2rem;
 `

@@ -3,13 +3,13 @@ import { FaInstagram } from "react-icons/fa"
 import { Layout } from "components/Layout"
 import { Container } from "components/Container"
 import {
-  InstaCard,
+  SNSCard,
   IconWrapper,
-  ImageWrapper,
+  InstaImageWrapper,
   Title,
   ScreenName,
   ExternalLink,
-} from "components/common/InstaCard"
+} from "components/common/SNSCard"
 
 const insta_url = "https://instagram.com/sobo_sapporo"
 const rel = "noopener noreferrer"
@@ -28,17 +28,17 @@ const News = (): JSX.Element => (
         </p>
       </Section>
       <div>
-        <InstaCard>
+        <SNSCard>
           <IconWrapper>
             <FaInstagram />
           </IconWrapper>
-          <ImageWrapper>
+          <InstaImageWrapper>
             <img src="/images/sobo-logo.png" />
-          </ImageWrapper>
+          </InstaImageWrapper>
           <Title>蒼氓(そうぼう)</Title>
           <ScreenName>sobo_sappro</ScreenName>
           <ExternalLink href={insta_url}>最新情報を確認する</ExternalLink>
-        </InstaCard>
+        </SNSCard>
       </div>
     </Container>
   </Layout>
