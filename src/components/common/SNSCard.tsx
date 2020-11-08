@@ -1,4 +1,5 @@
 import { styled } from "plugins/emotion"
+import { targetBlank } from "constants/targetBlank"
 
 export const SNSCard = styled.div`
   position: relative;
@@ -98,7 +99,7 @@ type Props = {
 }
 
 export const ExternalLink: React.FC<Props> = ({ href, children }) => (
-  <LinkButton href={href} target="_blank" rel="noopener noreferrer">
+  <LinkButton href={href} {...targetBlank}>
     {children}
   </LinkButton>
 )

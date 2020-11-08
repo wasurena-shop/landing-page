@@ -1,5 +1,7 @@
 import { styled } from "plugins/emotion"
 import { FaInstagram } from "react-icons/fa"
+import { snsLinks } from "constants/links"
+import { targetBlank } from "constants/targetBlank"
 import { Layout } from "components/Layout"
 import { Container } from "components/Container"
 import {
@@ -11,9 +13,6 @@ import {
   ExternalLink,
 } from "components/common/SNSCard"
 
-const insta_url = "https://instagram.com/sobo_sapporo"
-const rel = "noopener noreferrer"
-
 const News = (): JSX.Element => (
   <Layout>
     <Container>
@@ -21,7 +20,7 @@ const News = (): JSX.Element => (
         <h1>お知らせ</h1>
         <p>
           最新情報は
-          <a target="_blank" href={insta_url} rel={rel}>
+          <a href={snsLinks.instagram.href} {...targetBlank}>
             公式インスタグラム
           </a>
           または<a>ワスレナ商店公式LINE</a>にて随時配信しております。
@@ -36,8 +35,10 @@ const News = (): JSX.Element => (
             <img src="/images/sobo-logo.png" />
           </InstaImageWrapper>
           <Title>蒼氓(そうぼう)</Title>
-          <ScreenName>sobo_sappro</ScreenName>
-          <ExternalLink href={insta_url}>最新情報を確認する</ExternalLink>
+          <ScreenName>{snsLinks.instagram.id}</ScreenName>
+          <ExternalLink href={snsLinks.instagram.href}>
+            最新情報を確認する
+          </ExternalLink>
         </SNSCard>
       </div>
     </Container>

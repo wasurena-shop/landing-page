@@ -10,8 +10,7 @@ import {
   ExternalLink,
 } from "components/common/SNSCard"
 import { FaLine } from "react-icons/fa"
-
-const line_id = "@706aeenj"
+import { snsLinks } from "constants/links"
 
 const Contact = (): JSX.Element => (
   <Layout>
@@ -33,8 +32,8 @@ const Contact = (): JSX.Element => (
             <img src="/images/wasurena-logo.png" />
           </ImageWrapper>
           <Title>ワスレナ商店公式LINE</Title>
-          <ScreenName>{line_id}</ScreenName>
-          <ExternalLink href={`https://line.me/R/ti/p/${line_id}`}>
+          <ScreenName>{snsLinks.line.id}</ScreenName>
+          <ExternalLink href={snsLinks.line.href}>
             お友だち追加する
           </ExternalLink>
         </SNSCard>

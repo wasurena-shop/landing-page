@@ -1,55 +1,8 @@
 import NextLink from "next/link"
 import { styled } from "plugins/emotion"
-import { IconType } from "react-icons"
-import { FaTwitter, FaInstagram, FaLine, FaYoutube } from "react-icons/fa"
+import { links, snsLinks } from "constants/links"
+import { targetBlank } from "constants/targetBlank"
 import Logo from "../svgs/wasurena-logo-zure-white.svg"
-
-type Link = {
-  title: string
-  href: string
-}
-
-const links: Link[] = [
-  {
-    title: "ワスレナ商店について",
-    href: "/",
-  },
-  {
-    title: "お知らせ",
-    href: "/news",
-  },
-  {
-    title: "ご出品の流れ",
-    href: "/exhibit-flow",
-  },
-  {
-    title: "お問い合わせ",
-    href: "/contact",
-  },
-]
-
-const snsLinks: (Link & { Icon: IconType })[] = [
-  {
-    title: "Twitter",
-    href: "https://twitter.com",
-    Icon: FaTwitter,
-  },
-  {
-    title: "Instagram",
-    href: "https://instagram.com",
-    Icon: FaInstagram,
-  },
-  {
-    title: "Line",
-    href: "https://line.me",
-    Icon: FaLine,
-  },
-  {
-    title: "YouTube",
-    href: "https://youtube.com",
-    Icon: FaYoutube,
-  },
-]
 
 type Props = {
   onLinkClick: () => void
@@ -77,13 +30,8 @@ export const Navigation: React.FC<Props> = ({ onLinkClick, open }) => (
     <LinkToOnlineShop>ONLINE SHOP</LinkToOnlineShop>
 
     <SNSLinks>
-      {snsLinks.map(({ Icon, ...link }) => (
-        <IconLink
-          key={link.title}
-          href={link.href}
-          target="_blank"
-          rel="nofollow noopener"
-        >
+      {Object.values(snsLinks).map(({ Icon, ...link }) => (
+        <IconLink key={link.title} href={link.href} {...targetBlank}>
           <Icon size="1.6rem" />
         </IconLink>
       ))}
