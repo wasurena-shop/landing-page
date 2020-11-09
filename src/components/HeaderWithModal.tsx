@@ -94,4 +94,9 @@ const Link = styled.a`
     margin-left: 0.4rem;
     font-size: 14px;
   }
+  @media only screen and (max-width: 330px) {
+    & > svg {
+      display: none;
+    }
+  }
 `

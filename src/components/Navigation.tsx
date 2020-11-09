@@ -3,6 +3,7 @@ import { styled } from "plugins/emotion"
 import { links, snsLinks } from "constants/links"
 import { targetBlank } from "constants/targetBlank"
 import Logo from "../svgs/wasurena-logo-zure-white.svg"
+import { FaExternalLinkAlt } from "react-icons/fa"
 
 type Props = {
   onLinkClick: () => void
@@ -27,7 +28,10 @@ export const Navigation: React.FC<Props> = ({ onLinkClick, open }) => (
       ))}
     </Links>
 
-    <LinkToOnlineShop>ONLINE SHOP</LinkToOnlineShop>
+    <LinkToOnlineShop>
+      <span>ONLINE SHOP</span>
+      <FaExternalLinkAlt />
+    </LinkToOnlineShop>
 
     <SNSLinks>
       {Object.values(snsLinks).map(({ Icon, ...link }) => (
@@ -87,15 +91,21 @@ const Link = styled.a`
 // ONLINE SHOP
 const LinkToOnlineShop = styled.a`
   margin-top: 1.6em;
-  display: block;
   background-color: ${({ theme }) => theme.color.white};
   color: ${({ theme }) => theme.color.primary};
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 10px 14px;
   border-radius: 8px;
   box-shadow: 1px 5px 10px 1px rgba(209, 209, 209, 0.25);
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  & > svg {
+    margin-left: 0.4em;
+    margin-bottom: 2px;
+  }
 `
 
 // SNS
