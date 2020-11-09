@@ -28,7 +28,9 @@ export const Footer = () => (
             </li>
           ))}
         </SNSLinks>
-        <Copyright>©️ {new Date().getFullYear()} ワスレナ商店</Copyright>
+        <Copyright>
+          ©️ {new Date().getFullYear()} ワスレナ商店 All rights reserved.
+        </Copyright>
       </Flex>
     </Container>
   </Wrapper>
@@ -54,7 +56,7 @@ const Links = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
-  min-width: 280px;
+  width: 100%;
 
   & > li {
     padding-bottom: 0.3rem;
@@ -84,10 +86,29 @@ const SNSLinks = styled.ul`
   display: flex;
   padding: 0;
   margin: 1rem 0 0;
+
+  & > li {
+    display: flex;
+    align-items: center;
+  }
+
+  & > li:not(:first-of-type) {
+    &::before {
+      content: "";
+      width: 1px;
+      height: 120%;
+      display: inline-block;
+      background-color: ${({ theme }) => theme.color.secondary};
+    }
+  }
+
   a {
-    color: white;
-    font-size: 1.1rem;
-    margin: 0 0.5rem;
+    box-sizing: content-box;
+    color: #e8e8e8;
+    font-size: 1.2rem;
+    padding: 0.2rem 0.5rem;
+    height: 1.2rem;
+    margin: 0 0.3rem;
   }
 `
 
