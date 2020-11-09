@@ -33,8 +33,8 @@ export const snsLinks = {
   },
   instagram: {
     title: "Instagram",
-    href: "https://instagram.com/sobo_sapporo",
-    id: "sobo_sapporo",
+    href: "https://instagram.com/wasurena_store",
+    id: "wasurena_store",
     Icon: FaInstagram,
   },
   line: {

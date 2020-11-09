@@ -9,6 +9,7 @@ export const SNSCard = styled.div`
   padding: 2rem 2.4rem 1.4rem 2.4rem;
   width: fit-content;
   margin: 0 auto;
+  min-width: 240px;
 
   display: flex;
   flex-direction: column;
@@ -88,6 +89,7 @@ export const Title = styled.h2`
   margin: 0;
   color: ${({ theme }) => theme.color.primary};
   font-size: 1.2rem;
+  text-align: center;
 `
 
 export const ScreenName = styled.span`
@@ -114,5 +116,7 @@ const LinkButton = styled.a`
     font-weight: bold;
     padding: .5rem 1rem;
     border-radius: 4px;
+    text-align: center;
+    width: max-content;
   `}
 `
