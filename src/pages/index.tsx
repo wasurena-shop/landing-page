@@ -13,11 +13,38 @@ const Home = () => {
       </Head>
 
       <Container>
-        <BrandInfo>
+        <BrandInfo className="mincho">
           <Logo />
           <BrandInfoTitle>人から人へ、思いを添えて</BrandInfoTitle>
           <BrandInfoDesc>
-            手に取ったものには何らかの意味がある。その意味を、価値を見出す次の人へと繋ぐサスティナブルなサイクルを。循環するファッションも又、ファッションである。
+            <span>
+              <span>手に</span>
+              <span>取った</span>
+              <span>ものには</span>
+            </span>
+            <span>
+              <span>何らかの</span>
+              <span>意味がある。</span>
+            </span>
+            <span>その意味を、</span>
+            <span>
+              <span>価値を</span>
+              <span>見出す</span>
+            </span>
+            <span>
+              <span>次の人へと</span>
+              <span>繋ぐ</span>
+            </span>
+            <span>
+              <span>サスティナブルな</span>
+              <span>サイクルを。</span>
+            </span>
+            <br />
+            <span>
+              <span>循環する</span>
+              <span>ファッションも又、</span>
+              <span>ファッションである。</span>
+            </span>
           </BrandInfoDesc>
         </BrandInfo>
 
@@ -79,16 +106,23 @@ const BrandInfo = styled.section`
 `
 
 const BrandInfoTitle = styled.h2`
-  font-family: "YakuHanJP", "Inter", "BlinkMacSystemFont",
-    "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-  font-size: 1.9rem;
+  letter-spacing: 0.04em;
+  font-size: 1.6rem;
   font-weight: bold;
   text-align: center;
 `
 
 const BrandInfoDesc = styled.p`
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.7em;
+  letter-spacing: 0.04em;
   text-align: center;
+  margin: 1em;
+
+  span {
+    display: inline-block;
+  }
 `
 
 const Section = styled.section`

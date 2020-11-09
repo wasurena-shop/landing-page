@@ -30,6 +30,9 @@ const App = ({ Component, pageProps }: AppProps) => (
             "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
           margin: 0;
         }
+        .mincho {
+          font-family: "YakuHanMP", "Inter", "Noto Serif JP", serif;
+        }
       `}
     />
     <Component {...pageProps} />

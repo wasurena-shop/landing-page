@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import NextLink from "next/link"
 import { styled } from "plugins/emotion"
 import Logo from "../svgs/wasurena-logo-yoko-zure.svg"
+import { FaExternalLinkAlt } from "react-icons/fa"
 import { Container } from "components/Container"
 import { Burger } from "components/Burger"
 import { NavigationModal } from "components/NavigationModal"
@@ -25,9 +26,12 @@ export const HeaderWithModal: React.FC = () => {
             </NextLink>
             <Controls>
               <Link>
-                ONLINE
-                <br />
-                SHOP
+                <span>
+                  ONLINE
+                  <br />
+                  SHOP
+                </span>
+                <FaExternalLinkAlt />
               </Link>
               <Burger open={open} toggleMenu={() => setOpen((prev) => !prev)} />
             </Controls>
@@ -53,8 +57,14 @@ const LogoWrapper = styled.a`
 
   & svg {
     display: block;
-    height: 48px;
-    margin: 6px 0;
+    height: 38px;
+    margin: 10px 0;
+  }
+  @media only screen and (min-width: 700px) {
+    & > svg {
+      height: 48px;
+      margin: 6 8px 0;
+    }
   }
 `
 
@@ -68,12 +78,20 @@ const Link = styled.a`
   background-color: ${({ theme }) => theme.color.primary};
   border: none;
   border-radius: 4px;
-  padding: 4px 10px;
-  margin-right: 1em;
+  padding: 4px 8px;
+  margin-right: 1.4em;
   cursor: pointer;
   font-weight: bold;
-  font-size: 0.7rem;
+  font-size: 10px;
   color: #fff;
   outline: none;
   text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px;
+  display: flex;
+  align-items: center;
+
+  & > svg {
+    margin-left: 0.4rem;
+    font-size: 14px;
+  }
 `
