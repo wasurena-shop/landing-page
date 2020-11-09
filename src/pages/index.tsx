@@ -79,6 +79,8 @@ const BrandInfo = styled.section`
 `
 
 const BrandInfoTitle = styled.h2`
+  font-family: "YakuHanJP", "Inter", "BlinkMacSystemFont",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   font-size: 1.9rem;
   font-weight: bold;
   text-align: center;

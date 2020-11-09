@@ -20,14 +20,13 @@ const App = ({ Component, pageProps }: AppProps) => (
   <ThemeProvider theme={theme}>
     <Global
       styles={css`
-        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
         *,
         *:before,
         *:after {
           box-sizing: border-box;
         }
         body {
-          font-family: "Inter", "BlinkMacSystemFont",
+          font-family: "YakuHanJPs", "Inter", "BlinkMacSystemFont",
             "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
           margin: 0;
         }
