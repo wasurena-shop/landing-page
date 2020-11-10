@@ -15,7 +15,10 @@ const Home = () => {
       <Container>
         <BrandInfo className="mincho">
           <Logo />
-          <BrandInfoTitle>人から人へ、思いを添えて</BrandInfoTitle>
+          <BrandInfoTitle>
+            <span>人から人へ、</span>
+            <span>思いを添えて</span>
+          </BrandInfoTitle>
           <BrandInfoDesc>
             <span>
               <span>手に</span>
@@ -96,12 +99,16 @@ const Home = () => {
 }
 
 const BrandInfo = styled.section`
-  padding: 3em 0;
+  padding: 3em 0 0;
 
   & > svg {
     display: block;
-    width: 78%;
+    width: 66%;
     margin: auto;
+  }
+
+  @media only screen and (max-width: 350px) {
+    padding: 2em 0 0;
   }
 `
 
@@ -110,6 +117,11 @@ const BrandInfoTitle = styled.h2`
   font-size: 1.6rem;
   font-weight: bold;
   text-align: center;
+  margin: 0.8em 0;
+
+  span {
+    display: inline-block;
+  }
 `
 
 const BrandInfoDesc = styled.p`
@@ -118,16 +130,25 @@ const BrandInfoDesc = styled.p`
   line-height: 1.7em;
   letter-spacing: 0.04em;
   text-align: center;
-  margin: 1em;
+  margin: 1em 0 0;
 
   span {
     display: inline-block;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 1rem;
+    margin: 0.6em 0 0;
   }
 `
 
 const Section = styled.section`
   padding: 4em 0;
   filter: drop-shadow(${({ theme }) => theme.shadow});
+
+  @media only screen and (max-width: 350px) {
+    padding: 3em 0;
+  }
 
   & > h2,
   & > .content {
