@@ -38,7 +38,7 @@ const News = (): JSX.Element => {
           </p>
         </Section>
         <Section2>
-          <SNSCard>
+          <SNSCard className="gothic">
             <IconWrapper>
               <InstaIcon />
             </IconWrapper>
@@ -53,7 +53,7 @@ const News = (): JSX.Element => {
             </ExternalLink>
           </SNSCard>
 
-          <SNSCard>
+          <SNSCard className="gothic">
             <IconWrapper>
               <LineIcon />
             </IconWrapper>

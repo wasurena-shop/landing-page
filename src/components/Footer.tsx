@@ -28,7 +28,7 @@ export const Footer = () => (
             </li>
           ))}
         </SNSLinks>
-        <Copyright>
+        <Copyright className="gothic">
           ©️ {new Date().getFullYear()} ワスレナ商店 All rights reserved.
         </Copyright>
       </Flex>

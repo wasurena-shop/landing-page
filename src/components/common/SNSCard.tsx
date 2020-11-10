@@ -90,6 +90,7 @@ export const Title = styled.h2`
   color: ${({ theme }) => theme.color.primary};
   font-size: 1.2rem;
   text-align: center;
+  width: max-content;
 `
 
 export const ScreenName = styled.span`

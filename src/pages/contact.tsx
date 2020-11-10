@@ -34,7 +34,7 @@ const Contact = (): JSX.Element => {
         </Section>
         <Section2>
           <p>ワスレナ商店公式LINEはこちら</p>
-          <SNSCard>
+          <SNSCard className="gothic">
             <IconWrapper>
               <LineIcon size="1.6rem" />
             </IconWrapper>

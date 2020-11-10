@@ -32,6 +32,10 @@ const App = ({ Component, pageProps }: AppProps) => (
         .tsume {
           font-family: "YakuHanMP", "Inter", "Noto Serif JP", serif;
         }
+        .gothic {
+          font-family: "Inter", "BlinkMacSystemFont",
+            "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+        }
       `}
     />
     <Component {...pageProps} />
