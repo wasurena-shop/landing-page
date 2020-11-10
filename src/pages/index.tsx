@@ -13,7 +13,7 @@ const Home = () => {
       </Head>
 
       <Container>
-        <BrandInfo className="mincho">
+        <BrandInfo className="tsume">
           <Logo />
           <BrandInfoTitle>
             <span>人から人へ、</span>
@@ -107,8 +107,8 @@ const BrandInfo = styled.section`
     margin: auto;
   }
 
-  @media only screen and (max-width: 350px) {
-    padding: 2em 0 0;
+  @media only screen and (max-height: 700px) {
+    padding: 1.8em 0 0;
   }
 `
 
@@ -136,7 +136,7 @@ const BrandInfoDesc = styled.p`
     display: inline-block;
   }
 
-  @media only screen and (max-width: 350px) {
+  @media only screen and (max-height: 700px) {
     font-size: 1rem;
     margin: 0.6em 0 0;
   }
@@ -146,7 +146,7 @@ const Section = styled.section`
   padding: 4em 0;
   filter: drop-shadow(${({ theme }) => theme.shadow});
 
-  @media only screen and (max-width: 350px) {
+  @media only screen and (max-height: 700px) {
     padding: 3em 0;
   }
 

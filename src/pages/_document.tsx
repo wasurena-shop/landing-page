@@ -17,7 +17,7 @@ class Document extends NextDocument<Props> {
           />
           <link
             rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.3.1/dist/css/yakuhanjp.min.css"
+            href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.3.1/dist/css/yakuhanmps.min.css"
           />
         </Head>
         <body>

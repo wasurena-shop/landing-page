@@ -16,7 +16,7 @@ export const Navigation: React.FC<Props> = ({ onLinkClick, open }) => (
       <Logo />
     </LogoWrapper>
 
-    <Links className="mincho">
+    <Links>
       {links.map((link, index) => (
         <LinkItem key={index}>
           <NextLink href={link.href}>

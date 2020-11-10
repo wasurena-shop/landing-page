@@ -26,11 +26,10 @@ const App = ({ Component, pageProps }: AppProps) => (
           box-sizing: border-box;
         }
         body {
-          font-family: "YakuHanJPs", "Inter", "BlinkMacSystemFont",
-            "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+          font-family: "YakuHanMPs", "Inter", "Noto Serif JP", serif;
           margin: 0;
         }
-        .mincho {
+        .tsume {
           font-family: "YakuHanMP", "Inter", "Noto Serif JP", serif;
         }
       `}
