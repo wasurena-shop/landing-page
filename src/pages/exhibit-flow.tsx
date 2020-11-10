@@ -1,7 +1,9 @@
 import { styled } from "plugins/emotion"
+import { targetBlank } from "constants/targetBlank"
 import { Layout } from "components/Layout"
 import { Container } from "components/Container"
 import { List } from "components/common/List"
+import { TextLink } from "components/common/TextLink"
 
 const ExhibitFlow = (): JSX.Element => (
   <Layout>
@@ -47,8 +49,11 @@ const ExhibitFlow = (): JSX.Element => (
           <ImgCover src="/images/main02.png" />
         </ImageWrapper>
         <p>
-          出品カウンター(狸小路 蒼氓
-          店内カウンター(←そうぼうのサイトのリンク))まで出品物をお持込いただき、スタッフが対応いたします。お持ち込みの際は、以下のものをご持参いただきますよう、お願いいたします。
+          出品カウンター(
+          <TextLink href="http://crerass.co.jp/" {...targetBlank}>
+            狸小路 蒼氓 店内カウンター
+          </TextLink>
+          )まで出品物をお持込いただき、スタッフが対応いたします。お持ち込みの際は、以下のものをご持参いただきますよう、お願いいたします。
         </p>
         <p>～ご来店時に持参いただくもの～</p>
         <List>
