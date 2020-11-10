@@ -99,4 +99,12 @@ const Link = styled.a`
       display: none;
     }
   }
+
+  @media only screen and (min-width: 700px) {
+    font-size: 12px;
+    padding: 6px 10px;
+    & > svg {
+      font-size: 14px;
+    }
+  }
 `

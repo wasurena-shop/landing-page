@@ -76,7 +76,7 @@ const Section = styled.section`
 
 const Section2 = styled.section`
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   padding-bottom: 2rem;
   margin-bottom: 2rem;
 
