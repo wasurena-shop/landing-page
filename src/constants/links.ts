@@ -45,8 +45,8 @@ export const snsLinks = {
     Icon: FaLine,
   },
   youtube: {
-    title: "YouTube",
-    href: "https://youtube.com",
+    title: "マルア(服のチャンネル)",
+    href: "https://www.youtube.com/channel/UCf9PoZRk8FEZdu-GAgRU3lQ",
     Icon: FaYoutube,
   },
 }
