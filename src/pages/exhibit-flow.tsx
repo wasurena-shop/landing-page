@@ -1,4 +1,5 @@
 import { styled } from "plugins/emotion"
+import { ONLINE_SHOP_URL } from "constants/links"
 import { targetBlank } from "constants/targetBlank"
 import { Layout } from "components/Layout"
 import { Container } from "components/Container"
@@ -86,8 +87,11 @@ const ExhibitFlow = (): JSX.Element => (
           <ImgCover src="/images/main03.png" />
         </ImageWrapper>
         <p>
-          出品物は、「ワスレナ商店 ONLINE
-          SHOP」にて、出品物にまつわるメッセージを添え、1ヶ月間委託にて販売させていただきます。
+          出品物は、「
+          <TextLink href={ONLINE_SHOP_URL} {...targetBlank}>
+            ワスレナ商店 ONLINE SHOP
+          </TextLink>
+          」にて、出品物にまつわるメッセージを添え、1ヶ月間委託にて販売させていただきます。
         </p>
         <p className="info">
           ※お預かりした出品物は、不定期にて開催いたしますイベントにて販売させていただく事もございます。予めご了承ください。

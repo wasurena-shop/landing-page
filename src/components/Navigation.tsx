@@ -1,6 +1,6 @@
 import NextLink from "next/link"
 import { styled } from "plugins/emotion"
-import { links, snsLinks } from "constants/links"
+import { links, snsLinks, ONLINE_SHOP_URL } from "constants/links"
 import { targetBlank } from "constants/targetBlank"
 import Logo from "../svgs/wasurena-logo-zure-white.svg"
 import { FaExternalLinkAlt } from "react-icons/fa"
@@ -28,7 +28,7 @@ export const Navigation: React.FC<Props> = ({ onLinkClick, open }) => (
       ))}
     </Links>
 
-    <LinkToOnlineShop>
+    <LinkToOnlineShop href={ONLINE_SHOP_URL} {...targetBlank}>
       <span>ONLINE SHOP</span>
       <FaExternalLinkAlt />
     </LinkToOnlineShop>
@@ -95,6 +95,7 @@ const LinkToOnlineShop = styled.a`
   color: ${({ theme }) => theme.color.primary};
   font-weight: bold;
   font-size: 1.2rem;
+  text-decoration: none;
   padding: 10px 14px;
   border-radius: 8px;
   box-shadow: 1px 5px 10px 1px rgba(209, 209, 209, 0.25);

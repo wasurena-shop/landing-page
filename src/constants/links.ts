@@ -1,4 +1,3 @@
-import { IconType } from "react-icons"
 import { FaTwitter, FaInstagram, FaLine, FaYoutube } from "react-icons/fa"
 
 type Link = {
@@ -24,6 +23,8 @@ export const links: Link[] = [
     href: "/contact",
   },
 ]
+
+export const ONLINE_SHOP_URL = "https://wasurenasyoten.shop-pro.jp"
 
 export const snsLinks = {
   twitter: {

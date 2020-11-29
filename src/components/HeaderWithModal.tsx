@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"
 import NextLink from "next/link"
+import { ONLINE_SHOP_URL } from "constants/links"
+import { targetBlank } from "constants/targetBlank"
 import { styled } from "plugins/emotion"
 import Logo from "../svgs/wasurena-logo-yoko-zure.svg"
 import { FaExternalLinkAlt } from "react-icons/fa"
@@ -25,7 +27,7 @@ export const HeaderWithModal: React.FC = () => {
               </LogoWrapper>
             </NextLink>
             <Controls>
-              <Link>
+              <Link href={ONLINE_SHOP_URL} {...targetBlank}>
                 <span>
                   ONLINE
                   <br />
@@ -83,6 +85,7 @@ const Link = styled.a`
   cursor: pointer;
   font-weight: bold;
   font-size: 10px;
+  text-decoration: none;
   color: #fff;
   outline: none;
   text-align: center;
