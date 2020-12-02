@@ -47,7 +47,7 @@ const ExhibitFlow = (): JSX.Element => (
       <Section>
         <h2 id="お持ち込み">二. お持ち込み</h2>
         <ImageWrapper>
-          <ImgCover src="/images/main02.png" />
+          <ImgCover src="/images/main02.jpg" />
         </ImageWrapper>
         <p>
           出品カウンター(
@@ -84,7 +84,7 @@ const ExhibitFlow = (): JSX.Element => (
       <Section>
         <h2 id="販売">四. 販売</h2>
         <ImageWrapper>
-          <ImgCover src="/images/main03.png" />
+          <ImgCover src="/images/main03.jpg" />
         </ImageWrapper>
         <p>
           出品物は、「

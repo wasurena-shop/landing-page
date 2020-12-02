@@ -67,7 +67,7 @@ const Home = () => {
         <Section>
           <ScrollAnimation duration={1} animateIn="fadeInUp" animateOnce>
             <ImageWrapper>
-              <Image src="/images/main01.png" />
+              <Image src="/images/main01.jpg" />
             </ImageWrapper>
           </ScrollAnimation>
           <ScrollAnimation
@@ -88,7 +88,7 @@ const Home = () => {
         <Section>
           <ScrollAnimation duration={1} animateIn="fadeInUp" animateOnce>
             <ImageWrapper>
-              <Image src="/images/main02.png" />
+              <Image src="/images/main02.jpg" />
             </ImageWrapper>
           </ScrollAnimation>
           <ScrollAnimation
@@ -109,7 +109,7 @@ const Home = () => {
         <Section>
           <ScrollAnimation duration={1} animateIn="fadeInUp" animateOnce>
             <ImageWrapper>
-              <Image src="/images/main03.png" />
+              <Image src="/images/main03.jpg" />
             </ImageWrapper>
           </ScrollAnimation>
           <ScrollAnimation
