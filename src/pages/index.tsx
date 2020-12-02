@@ -162,8 +162,9 @@ const Section = styled.section`
     margin: 0;
     padding: 6px 10px;
     width: fit-content;
-    background-color: ${({ theme }) => theme.color.white};
-    font-size: 1.2rem;
+    background-color: ${({ theme }) => theme.color.primary};
+    color: ${({ theme }) => theme.color.white};
+    font-size: 1.3em;
   }
   & > .content {
     position: relative;
@@ -174,6 +175,7 @@ const Section = styled.section`
     color: ${({ theme }) => theme.color.secondary};
     font-size: 1rem;
     letter-spacing: 0.04rem;
+    line-height: 1.6em;
 
     & > p {
       margin: 0;
