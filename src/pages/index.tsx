@@ -1,9 +1,12 @@
 import Head from "next/head"
+import ScrollAnimation from "react-animate-on-scroll"
 import { styled } from "plugins/emotion"
 import Logo from "../svgs/wasurena-logo-main.svg"
+import { ONLINE_SHOP_URL } from "constants/links"
+import { targetBlank } from "constants/targetBlank"
 import { Layout } from "components/Layout"
 import { Container } from "components/Container"
-import ScrollAnimation from "react-animate-on-scroll"
+import { TextLink } from "components/common/TextLink"
 
 const Home = () => {
   return (
@@ -118,13 +121,15 @@ const Home = () => {
             <h2>出品について</h2>
             <div className="content">
               <p>
-                出品物と一緒にご出品者の品物に対する思いなどをメッセージとして掲載し、出品物に添えて販売いたします。出品物の価格は、ご出品者の希望を基に決定いたします。出品物は、「ワスレナ商店
-                online
-                shop」で販売いたします。ご出品者の成約金は、ご指定口座に自動で振込まれます。
+                出品物と一緒にご出品者の品物に対する思いなどをメッセージとして掲載し、出品物に添えて販売いたします。出品物の価格は、ご出品者の希望を基に決定いたします。出品物は、「
+                <TextLink href={ONLINE_SHOP_URL} {...targetBlank}>
+                  ワスレナ商店 ONLINE SHOP
+                </TextLink>
+                」で販売いたします。ご出品者の成約金は、ご指定口座に自動で振込まれます。
               </p>
               <Info>
                 <p>
-                  ※出品物は委託販売となります。成約後、売上の30%がご出品者に配分されます。配分は、月末締め翌月末払いにてご指定口座にお振込みさせていただきます。
+                  ※出品物は委託販売となります。成約後、売上金を月末締め翌月末払いにてご指定口座にお振込させていただきます。
                 </p>
               </Info>
             </div>
