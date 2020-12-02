@@ -19,6 +19,10 @@ class Document extends NextDocument<Props> {
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.3.1/dist/css/yakuhanmp_s.min.css"
           />
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+          />
         </Head>
         <body>
           <Main />
