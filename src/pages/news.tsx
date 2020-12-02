@@ -1,4 +1,5 @@
 import { styled } from "plugins/emotion"
+import Logo from "../svgs/wasurena-logo-main.svg"
 import { snsLinks } from "constants/links"
 import { targetBlank } from "constants/targetBlank"
 import { Layout } from "components/Layout"
@@ -43,7 +44,7 @@ const News = (): JSX.Element => {
               <InstaIcon />
             </IconWrapper>
             <InstaImageWrapper>
-              <img src="/images/wasurena-logo.png" />
+              <Logo />
             </InstaImageWrapper>
             <Title>ワスレナ商店</Title>
             <ScreenName>{instagram.id}</ScreenName>
@@ -58,7 +59,7 @@ const News = (): JSX.Element => {
               <LineIcon />
             </IconWrapper>
             <ImageWrapper>
-              <img src="/images/wasurena-logo.png" />
+              <Logo />
             </ImageWrapper>
             <Title>ワスレナ商店公式LINE</Title>
             <ScreenName>{line.id}</ScreenName>

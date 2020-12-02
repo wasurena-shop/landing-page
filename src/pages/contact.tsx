@@ -1,4 +1,5 @@
 import { styled } from "plugins/emotion"
+import Logo from "../svgs/wasurena-logo-main.svg"
 import { Layout } from "components/Layout"
 import { Container } from "components/Container"
 import {
@@ -39,7 +40,7 @@ const Contact = (): JSX.Element => {
               <LineIcon size="1.6rem" />
             </IconWrapper>
             <ImageWrapper>
-              <img src="/images/wasurena-logo.png" />
+              <Logo />
             </ImageWrapper>
             <Title>ワスレナ商店公式LINE</Title>
             <ScreenName>{line.id}</ScreenName>

@@ -33,7 +33,8 @@ export const ImageWrapper = styled.div`
   background-color: ${({ theme }) => theme.color.white};
   margin-bottom: 0.8rem;
 
-  & > img {
+  & > img,
+  & > svg {
     position: absolute;
     object-fit: contain;
     width: 100%;
@@ -49,7 +50,8 @@ export const InstaImageWrapper = styled.div`
   background-color: ${({ theme }) => theme.color.white};
   margin-bottom: 1.6rem;
 
-  & > img {
+  & > img,
+  & > svg {
     position: absolute;
     object-fit: contain;
     width: 100%;
