@@ -8,6 +8,12 @@ class Document extends NextDocument<Props> {
       <Html lang="ja">
         <Head>
           <link
+            rel="apple-touch-icon"
+            type="image/png"
+            href="/apple-touch-icon.png"
+          />
+          <link rel="icon" type="image/png" href="/icon-192x192.png" />
+          <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Serif+JP:wght@500;700&display=swap"
             rel="stylesheet"
           />
