@@ -2,11 +2,29 @@ import NextDocument, { Html, Head, Main, NextScript } from "next/document"
 
 type Props = {}
 
+const DESCRIPTION =
+  "手に取ったものには何らかの意味がある。その意味を、価値を見出す次の人へと繋ぐサスティナブルなサイクルを。循環するファッションも又、ファッションである。"
+
 class Document extends NextDocument<Props> {
   render() {
     return (
       <Html lang="ja">
         <Head>
+          <title>ワスレナ商店 - 人から人へ、思いを添えて</title>
+          <link rel="icon" href="/favicon.ico" />
+          <meta name="description" content={DESCRIPTION} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta
+            property="og:title"
+            content="ワスレナ商店 - 人から人へ、思いを添えて"
+          />
+          <meta property="og:description" content={DESCRIPTION} />
+          <meta property="og:url" content="https://www.wasurena-shouten.com" />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:image"
+            content="https://www.wasurena-shouten.com/images/ogp.png"
+          />
           <link
             rel="apple-touch-icon"
             type="image/png"

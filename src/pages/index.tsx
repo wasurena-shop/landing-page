@@ -1,4 +1,3 @@
-import Head from "next/head"
 import ScrollAnimation from "react-animate-on-scroll"
 import { styled } from "plugins/emotion"
 import Logo from "../svgs/wasurena-logo-main.svg"
@@ -11,11 +10,6 @@ import { TextLink } from "components/common/TextLink"
 const Home = () => {
   return (
     <Layout>
-      <Head>
-        <title>ワスレナ商店 - 人から人へ、思いを添えて</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <Container>
         <BrandInfo className="tsume">
           <ScrollAnimation duration={1.6} animateIn="fadeInUp" animateOnce>
