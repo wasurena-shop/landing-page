@@ -1,5 +1,5 @@
 import { styled } from "plugins/emotion"
-import { ONLINE_SHOP_URL } from "constants/links"
+import { ONLINE_SHOP_URL, snsLinks } from "constants/links"
 import { targetBlank } from "constants/targetBlank"
 import { Layout } from "components/Layout"
 import { Container } from "components/Container"
@@ -63,9 +63,16 @@ const ExhibitFlow = (): JSX.Element => (
             身分証明書(住所、生年月日が記載された有効期限内のもの。例:運転免許証、健康保険証、パスポート等)
           </li>
           <li>
-            お振込先口座のわかるもの(例:銀行キャッシュカード、もしくは通帳){" "}
+            お振込先口座のわかるもの(例:銀行キャッシュカード、もしくは通帳)
           </li>
         </List>
+        <p>
+          宅配でのお持ち込みも受け付けております。詳しくは
+          <TextLink href={snsLinks.line.href} {...targetBlank}>
+            ワスレナ商店公式LINE
+          </TextLink>
+          にてお問い合わせください。
+        </p>
       </Section>
 
       <Section>
