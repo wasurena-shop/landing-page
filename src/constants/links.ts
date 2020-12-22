@@ -24,7 +24,7 @@ export const links: Link[] = [
   },
 ]
 
-export const ONLINE_SHOP_URL = "https://wasurenasyoten.shop-pro.jp"
+export const ONLINE_SHOP_URL = "http://shop.wasurena-shouten.com"
 
 export const snsLinks = {
   twitter: {
