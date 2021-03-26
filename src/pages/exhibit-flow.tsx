@@ -50,11 +50,14 @@ const ExhibitFlow = (): JSX.Element => (
           <ImgCover src="/images/main02.jpg" />
         </ImageWrapper>
         <p>
-          出品カウンター(
-          <TextLink href="http://crerass.co.jp/" {...targetBlank}>
-            狸小路 蒼氓 店内カウンター
+          <TextLink
+            href="https://goo.gl/maps/cpityJmbpvJ8xt569"
+            {...targetBlank}
+          >
+            勿忘/ワスレナ商店
           </TextLink>
-          )まで出品物をお持込いただき、スタッフが対応いたします。お持ち込みの際は、以下のものをご持参いただきますよう、お願いいたします。
+          の出品カウンター
+          まで出品物をお持込いただき、スタッフが対応いたします。お持ち込みの際は、以下のものをご持参いただきますよう、お願いいたします。
         </p>
         <p>～ご来店時に持参いただくもの～</p>
         <List>
