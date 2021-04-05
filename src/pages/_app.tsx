@@ -1,4 +1,5 @@
 import { AppProps } from "next/app"
+import Head from "next/head"
 import { ThemeProvider } from "emotion-theming"
 import { Global, css } from "@emotion/core"
 import { Theme } from "plugins/emotion"
@@ -18,6 +19,9 @@ const theme: Theme = {
 
 const App = ({ Component, pageProps }: AppProps) => (
   <ThemeProvider theme={theme}>
+    <Head>
+      <title>ワスレナ商店 - 人から人へ、思いを添えて</title>
+    </Head>
     <Global
       styles={css`
         *,

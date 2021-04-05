@@ -10,7 +10,6 @@ class Document extends NextDocument<Props> {
     return (
       <Html lang="ja">
         <Head>
-          <title>ワスレナ商店 - 人から人へ、思いを添えて</title>
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content={DESCRIPTION} />
           <meta name="twitter:card" content="summary_large_image" />
